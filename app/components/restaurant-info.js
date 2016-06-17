@@ -6,17 +6,19 @@ export default Ember.Component.extend({
     return this.get('restaurant.street') + ', ' + this.get('restaurant.city') + ', ' + this.get('restaurant.state') + ' ' + this.get('restaurant.zip');
   }),
 
-  ratingStatus: '',
+  ratingStatus: 'No reviews yet',
   ratingStatusObserver: function() {
     var ratingCount = 0;
     var totalRatings = this.get('restaurant.reviews.length');
-    
+
     this.get('restaurant.reviews').then((reviews) => {
       reviews.forEach((review) => {
         ratingCount += parseInt(review.get('rating'));
       });
       var avg = ratingCount / totalRatings;
-      this.set('ratingStatus', avg.toFixed(2));
+      if (ratingCount > 0) {
+        this.set('ratingStatus', avg.toFixed(2));
+      }
     });
   }.observes('restaurant.reviews.[]').on('init'),
 
