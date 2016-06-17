@@ -17,5 +17,13 @@ export default Ember.Route.extend({
       });
       restaurant.save();
     },
+    saveReview(params) {
+      var newReview = this.store.createRecord('review', params);
+      var restaurant = params.restaurant;
+      restaurant.get('reviews').addObject(newReview);
+      newReview.save().then(function() {
+        return restaurant.save();
+      });
+    }
   }
 });

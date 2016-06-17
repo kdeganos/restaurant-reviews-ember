@@ -14,6 +14,9 @@ export default Ember.Component.extend({
     },
     updateRestaurant(restaurant, params) {
       this.sendAction('updateRestaurant', restaurant, params);
+    },
+    saveReview(params){
+      this.sendAction('saveReview', params);
     }
   }
 });

@@ -11,4 +11,15 @@
 </div>
 
 <div style="padding:15px">
+  <h2>Average User Rating: </h2>
+  <h2>Comments</h2>
+
+  {{#each restaurant.reviews as |review|}}
+    <div style="background:#d0f1ff;width:95%;padding:5px;margin-top:10px;border-left:1px #999 solid;">
+    <p style="padding-left:15px">"{{review.body}}" <br><span style="padding-left:30px">By {{review.author}} on {{review.date}}</span></p>
+    Rated: <span style="font-weight:800">{{review.rating}}</span> out of 5<br>
+    </div>
+  {{/each}}
+    <br>
+    {{new-review restaurant=restaurant saveReview="saveReview"}}
 </div>
