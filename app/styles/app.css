@@ -1,0 +1,59 @@
+.bubble {
+  float:left;
+  background:darkgrey;
+  border-radius:5px;
+  padding:2px;
+  padding-left:5px;
+  padding-right:5px;
+  margin-right:5px;
+  color:#fff;
+}
+
+.tileImage {
+  display:block;
+  height:200px;
+  line-height:200px;
+  overflow:hidden;
+}
+
+.restaurant {
+  margin-left:25px;
+}
+
+.restaurantTile {
+  display:inline-block;
+  border:1px;
+  background:#ecf0f1;
+  width:300px;
+  height:450px;
+  padding:15px;
+  margin-top:10px;
+  margin-right:10px;
+  float:left;
+  box-shadow:1px 1px 1px #ccc;
+  border-radius:5px;
+}
+
+.navbar {
+  background:#ecf0f1;
+  border-bottom: 0;
+  height:121px;
+  margin-top:-20px;
+  margin-bottom:0px;
+  width:100%;
+}
+
+.breadcrumb {
+  box-shadow:1px 1px 1px #ccc;
+  margin-bottom:0;
+  padding: 8px 15px;
+  padding-top:15px
+}
+
+.form-group {
+    margin-bottom: 6px;
+}
+
+.ember-view {
+  display:inline;
+}

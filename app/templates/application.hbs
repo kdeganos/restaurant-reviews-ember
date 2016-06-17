@@ -1,0 +1,15 @@
+<nav class="navbar navbar-default" style="position:fixed">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      {{#link-to 'index'}}<a class="navbar-brand">
+        <h1 style="font-size:3.5em">Restaurant Reviews</h1>
+      </a>{{/link-to}}
+    </div>
+  </div>
+
+<ol class="breadcrumb" style="margin-top:55px">
+  <li>{{#link-to 'index'}}<a>Home</a>{{/link-to}}</li>
+  <span style="float:right;background:darkgray;padding:5px;border-radius:15px;margin-top:-10px;padding-left:10px;padding-right:10px;"><a style="color:#fff">Favorites()<img width="24" src=""></a></span>
+</ol>
+</nav>
+{{outlet}}
