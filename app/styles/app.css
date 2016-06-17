@@ -18,7 +18,7 @@
 
 .detailImage {
   width: 95%;
-  max-width: 700px;
+  max-width: 600px;
 }
 
 .restaurant {
@@ -65,4 +65,9 @@
 
 .ember-view {
   display:inline;
+}
+
+.map-display {
+    height: 600px;
+    width: 600px;
 }

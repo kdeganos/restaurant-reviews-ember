@@ -5,6 +5,8 @@
   <span class="bubble">{{restaurant.cuisine}}</span><br>
   <h3>{{restaurant.street}}, {{restaurant.city}}, {{restaurant.state}} {{restaurant.zip}}</h3>
 
+  {{google-map restaurant=restaurant}}
+
   <button class="btn btn-info" {{action 'addToFavorites' restaurant}}>Add to Favorites</button>
   <button class="btn btn-danger" {{action 'destroyRestaurant' restaurant}}>Delete Restaurant</button>
   {{update-restaurant restaurant=restaurant updateRestaurant="updateRestaurant"}}

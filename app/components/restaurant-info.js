@@ -2,6 +2,9 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   favorites: Ember.inject.service(),
+  fullAddress: Ember.computed('restaurant', function() {
+    return this.get('restaurant.street') + ', ' + this.get('restaurant.city') + ', ' + this.get('restaurant.state') + ' ' + this.get('restaurant.zip');
+  }),
 
   ratingStatus: '',
   ratingStatusObserver: function() {
@@ -15,7 +18,7 @@ export default Ember.Component.extend({
           var avg = ratingCount / totalRatings;
           this.set('ratingStatus', avg);
       });
-}.observes('restaurant.reviews.[]').on('init'),
+  }.observes('restaurant.reviews.[]').on('init'),
 
   actions: {
     addToFavorites(restaurant) {
