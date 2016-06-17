@@ -1,0 +1,52 @@
+{{#if updateRestaurantForm}}
+  <div class="restaurantTile" style="float:right">
+
+    <h1>Update Restaurant</h1>
+    <div style="text-align:right">
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          {{input value=name id="name" placeholder=restaurant.name}}
+        </div>
+
+        <div class="form-group">
+          <label for="cuisine">Cuisine</label>
+          {{input value=cuisine id="cuisine" placeholder=restaurant.cuisine}}
+        </div>
+
+        <div class="form-group">
+          <label for="image">Image URL</label>
+          {{input value=image id="image" placeholder=restaurant.image}}
+        </div>
+
+        <div class="address-group">
+          <h3 style="text-align:left">Address</h3>
+          <div class="form-group">
+            <label for="street">Street</label>
+            {{input value=street id="street" placeholder=restaurant.street}}
+          </div>
+
+          <div class="form-group">
+            <label for="city">City</label>
+            {{input value=city id="city" placeholder=restaurant.city}}
+          </div>
+
+          <div class="form-group">
+            <label for="state">State</label>
+            {{input value=state id="state" placeholder=restaurant.state}}
+          </div>
+
+          <div class="form-group">
+            <label for="zip">Zip Code</label>
+            {{input value=zip id="zip" placeholder=restaurant.zip}}
+          </div>
+        </div>
+
+        <button {{action 'updateRestaurant' restaurant}} class="btn btn-success">Save</button>
+      </form>
+    </div>
+  </div>
+
+  {{else}}
+  <button class="btn" {{action 'updateRestaurantForm'}}>Update</button>
+{{/if}}
