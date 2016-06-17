@@ -60,7 +60,7 @@
 }
 
 .form-group {
-    margin-bottom: 6px;
+  margin-bottom: 6px;
 }
 
 .ember-view {
@@ -68,6 +68,6 @@
 }
 
 .map-display {
-    height: 600px;
-    width: 600px;
+  height: 600px;
+  width: 600px;
 }

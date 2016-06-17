@@ -13,13 +13,13 @@ export default Ember.Component.extend({
         zip: this.get('zip'),
       };
       this.sendAction('saveRestaurant', params);
-      // this.set('name', "");
-      // this.set('cuisine', "");
-      // this.set('image', "");
-      // this.set('street', "");
-      // this.set('city', "");
-      // this.set('state', "");
-      // this.set('zip', "");
+      this.set('name', "");
+      this.set('cuisine', "");
+      this.set('image', "");
+      this.set('street', "");
+      this.set('city', "");
+      this.set('state', "");
+      this.set('zip', "");
     }
   }
 });

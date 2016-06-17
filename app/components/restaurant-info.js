@@ -8,16 +8,16 @@ export default Ember.Component.extend({
 
   ratingStatus: '',
   ratingStatusObserver: function() {
-      var ratingCount = 0;
-      var totalRatings = this.get('restaurant.reviews.length');
-
-      this.get('restaurant.reviews').then((reviews) => {
-          reviews.forEach((review) => {
-            ratingCount += parseInt(review.get('rating'));
-          });
-          var avg = ratingCount / totalRatings;
-          this.set('ratingStatus', avg);
+    var ratingCount = 0;
+    var totalRatings = this.get('restaurant.reviews.length');
+    
+    this.get('restaurant.reviews').then((reviews) => {
+      reviews.forEach((review) => {
+        ratingCount += parseInt(review.get('rating'));
       });
+      var avg = ratingCount / totalRatings;
+      this.set('ratingStatus', avg.toFixed(2));
+    });
   }.observes('restaurant.reviews.[]').on('init'),
 
   actions: {
@@ -26,7 +26,7 @@ export default Ember.Component.extend({
     },
     destroyRestaurant(restaurant) {
       if (confirm('Are you sure you want to delete this restaurant?')) {
-      this.sendAction('destroyRestaurant', restaurant);
+        this.sendAction('destroyRestaurant', restaurant);
       }
     },
     updateRestaurant(restaurant, params) {

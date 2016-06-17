@@ -1,7 +1,15 @@
-# Restaurant-reviews
+# Restaurant Reviews
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+#### _Website that allows review restaurants, 06/17/2016_
+
+## Description
+This app lets users review restaurants. Users may add, edit and delete restaurants. Reviews may also be added. Reviews will be automatically timestamped and will include a rating. This rating is averaged for each restaurant. A map displaying the restaurants location may be displayed using Google Maps API.
+
+Also uses the following:
+* ember bootstrap
+* ember moment
+* emberx-select
+* emberfire
 
 ## Prerequisites
 
@@ -25,32 +33,8 @@ You will need the following things properly installed on your computer.
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
+### License
 
-Make use of the many generators for code, try `ember help generate` for more details
+*Code released under the MIT license.*
 
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-ember bootstrap
-ember moment
-emberx-select
-emberfire
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+Copyright (c) 2016 **Kevin Deganos**

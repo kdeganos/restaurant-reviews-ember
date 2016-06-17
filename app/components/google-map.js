@@ -6,15 +6,10 @@ export default Ember.Component.extend({
     return this.get('restaurant.street') + ', ' + this.get('restaurant.city') + ', ' + this.get('restaurant.state') + ' ' + this.get('restaurant.zip');
   }),
   actions: {
-     showMap(restaurant) {
-       var container = this.$('.map-display')[0];
-      //  var coord = this.get('map').center(this.get('fullAddress'));
-      //  console.log(this.get('map').center(this.get('fullAddress')));
-      //  var options = {
-      //    center: coord,
-      //    zoom: 15
-      //  };
-       this.get('map').findMap(container, this.get('fullAddress'));
-     }
-   }
+    showMap(restaurant) {
+      var container = this.$('.map-display')[0];
+
+      this.get('map').findMap(container, this.get('fullAddress'));
+    }
+  }
 });
