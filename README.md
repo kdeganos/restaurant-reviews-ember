@@ -1,6 +1,6 @@
 # Restaurant Reviews
 
-#### _Website that allows review restaurants, 06/17/2016_
+#### _Website that allows users to review restaurants, 06/17/2016_
 
 ## Description
 This app lets users review restaurants. Users may add, edit and delete restaurants. Reviews may also be added. Reviews will be automatically timestamped and will include a rating. This rating is averaged for each restaurant. A map displaying the restaurants location may be displayed using Google Maps API.
